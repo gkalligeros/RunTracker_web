@@ -1,0 +1,14 @@
+.menu
+  ul.nav.nav-pills
+    if (logged) 
+      li(class=(menu === 'runs')?'active':'')
+        a(href='/') My Runs
+      li(class=(menu === 'profile')?'active':'')
+        a(href="/profile") Profile
+      li
+        a(href="/logout") Log out
+    else
+      li(class=(menu === 'login')?'active':'')
+        a(href='/login') Log in
+      li(class=(menu === 'register')?'active':'')
+        a(href='/Register') Register

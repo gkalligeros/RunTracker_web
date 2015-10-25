@@ -1,0 +1,37 @@
+extends layout_other
+
+block page 
+  - var menu = 'register'
+block content
+  
+    if(error)
+      div.alert.alert-danger=error
+    div
+      form.form-horizontal#register_form
+          div.form-group
+            label.col-sm-2(for="username") Username:
+            div.col-sm-10             
+              input.form-control#username(name="username", type="text", placeholder="username")
+          div.form-group
+            label.col-sm-2(for="password") Password:
+            div.col-sm-10  
+              input.form-control#pass(name="password", type="password", placeholder="psw")
+          div.form-group
+            label.col-sm-2(for="password_r") Password again:
+            div.col-sm-10  
+              input.form-control#pass_r(name="password_r", type="password", placeholder="psw")
+          div.form-group
+            label.col-sm-2(for="name") Name:
+            div.col-sm-10  
+              input.form-control#name(name="name", type="text", placeholder="name")
+          div.form-group
+            label.col-sm-2(for="Surname") Surname:
+            div.col-sm-10  
+              input.form-control#surname(name="surname", type="text", placeholder="surname")
+          div.form-group
+            label.col-sm-2(for="Surname") E-mail:
+            div.col-sm-10  
+              input.form-control#E-mail(name="E-mail", type="text", placeholder="E-mail")
+          div.form-group
+              div.col-sm-10.col-sm-offset-2
+                button.btn.btn-lg.btn-primary.btnsurname-block(type="submit") Register

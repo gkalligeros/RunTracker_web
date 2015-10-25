@@ -1,0 +1,23 @@
+extends layout_run_page
+block page 
+	- var menu = 'runs'
+block content
+	div#dialog-confirm
+	if(logged)
+		div.container
+			div.col-sm-4.list
+				if (runs.length === 0)
+					p run forest run!(no runs)
+				else 
+				ul.list-group#list
+					each run, index in runs
+						li.list-group-item.trackelement#trackelement(track_id="#{run._id}")
+							div.trackdiv(track = "#{run.track}")
+								p Date #{run.date}
+								p Distance #{run.distance}
+								p Time #{run.time}
+							button.btn.btn-danger.btn-sm.remove(type="button")
+								span.glyphicon.glyphicon-remove(title="Delete Track")
+				div.holder
+			div.col-sm-8#map_container
+				p map here 

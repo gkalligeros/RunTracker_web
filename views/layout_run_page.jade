@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= appTitle
+    script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.3.min.js")
+        script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.3.min.js")
+
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css')
+    script(type="text/javascript", src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    script(type="text/javascript", src='https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry')
+    script(type="text/javascript", src="/js/jPages.min.js")
+
+    script(type="text/javascript", src="/js/map.js")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  body
+   
+      .container
+        h1.page-header= appTitle
+        block page
+        block header
+          div
+            include includes/menu
+        block alert
+          div.alert.alert-warning.hidden
+          div.alert.alert-success.hidden
+        .content
+          block content
